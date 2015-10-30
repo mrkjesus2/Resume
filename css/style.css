@@ -68,7 +68,7 @@ button:hover {
 }
 
 .icon {
-  width: 3vh;
+  width: 2vh;
   padding: 7px 0 0 5px;
   color: red;
   align-items: center;
@@ -243,6 +243,9 @@ a {
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
+  }
+  .icon {
+    width: 3vh;
   }
 }
 
