@@ -106,21 +106,21 @@ var education = {
 			"location" : "Bloomington, MN",
 			"degree" : "Nope",
 			"majors" : ["Engineering Prereqs"],
-			"dates" : "200",
+			"dates" : 200,
 			"url" : "Put your course info here"
 		},{
 			"name" : "University of Minnesota",
 			"location" : "Minneapolis,MN",
 			"majors" : ["Liberal Arts", "Music"],
 			"degree" : "nope",
-			"dates": "200",
+			"dates": 200,
 			"url" : "Put your course info here"
 		},{
 			"name" : "Cooper High School",
 			"location" : "Plymouth, MN",
 			"majors" : ["College Prep"],
 			"degree" : "College Prep",
-			"dates": "1998",
+			"dates": 200,
 			"url" : "Put your course info here"
 		}
 	],
@@ -128,12 +128,12 @@ var education = {
 		{
 			"title" : "Front-End Nanodegree",
 			"school" : "Udacity",
-			"dates" : "2015",
+			"dates" : 2015,
 			"url" : "http://www.udacity.com/"
 		},{
 			"title" : "Front-End Nanodegree",
 			"school" : "Udacity",
-			"dates" : "2015",
+			"dates" : 2015,
 			"url" : "http://www.udacity.com/"
 		}
 	]
@@ -144,10 +144,11 @@ var education = {
 //////////////////////////////////
 bio.display = function() {
 	//Declare variables for shorter lines later
-	var name, role, welcomeMsg, picURL, contacts, skills;
+	var name, role, welcomeMsg, picURL;
 	var mobile, email, twitter, github, blog, location;
 	var cont = bio.contacts;
 	var data = '%data%';
+	var header = $('.static');
 
 	//Replace the given HTML with object data
 	//Header info
@@ -165,12 +166,11 @@ bio.display = function() {
 	location = HTMLbioLocation.replace(data, cont.location);
 
 	//Append the new HTML to the page
-	$('#header').prepend(name, role);
-	$('#header').append(welcomeMsg, picURL);
+	header.prepend(name, role);
+	header.append(picURL, welcomeMsg);
 	$('#topContacts').append(mobile, email, location);
 	$('#footerContacts').append(mobile, email, github, blog, twitter);
 
-	// TODO: Can be refined?
 	if (bio.skills.length > 0) {
 		$('#header').append(HTMLskillsStart);
 		bio.skills.forEach(function(skill) {
@@ -180,6 +180,8 @@ bio.display = function() {
 };
 
 education.display = function() {
+	// Save some lookups
+	var education = $('#education');
 	// School Loop to replace and append
 	this.schools.forEach(function(school) {
 		var name, location, degree, dates, url, majors;
@@ -193,7 +195,7 @@ education.display = function() {
 		dates = HTMLschoolDates.replace(data, school.dates);
 
 		// Append new HTML
-		$('#education').append(HTMLschoolStart);
+		education.append(HTMLschoolStart);
 		$('.education-entry:last').append(name + degree, dates, location);
 		school.majors.forEach(function(major) {
 			var mjr = HTMLschoolMajors.replace(data, major);
@@ -201,7 +203,7 @@ education.display = function() {
 		});
 	});
 	// Append Online Course header
-	$('#education').append(HTMLonlineClasses);
+	education.append(HTMLonlineClasses);
 	// Online Course loop to replace and append
 	this.onlineCourses.forEach(function(course) {
 		var title, school, dates, url;
@@ -214,7 +216,7 @@ education.display = function() {
 		url = HTMLonlineURL.replace(data, course.url).replace('#', course.url);
 
 		//Append new HTML
-		$('#education').append(HTMLschoolStart);
+		education.append(HTMLschoolStart);
 		$('.education-entry:last').append(title + school, dates, url);
 	});
 };
@@ -265,22 +267,23 @@ work.display = function() {
 ////////////////////////////
 // Call display functions //
 ////////////////////////////
-bio.display();
+education.display();
 projects.display();
 work.display();
-education.display();
+bio.display();
 
 ///////////////////////////////
 // Extras from the JS course //
 ///////////////////////////////
 
-$('#main').append(internationalizeButton);
+
 $('#mapDiv').append(googleMap);
 
+/*$('#main').append(internationalizeButton);
 function inName() {
 	var nameArray = bio.name.split(' ');
 	firstName = nameArray[0].slice(0,1).toUpperCase() + nameArray[0].slice(1).toLowerCase();
 	lastName = nameArray[1].toUpperCase();
 	return firstName + ' ' + lastName;
-}
+}*/
 

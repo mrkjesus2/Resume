@@ -44,29 +44,37 @@ var HTMLskills = '<li class="flex-item">' +
 
 
 /**************
-** Work HTML **
+** Work HTML **  Note that the hidden class is added here
 **************/
-var HTMLworkStart = '<div class="work-entry"></div>';
+var HTMLworkStart = '<div class="work-entry hidden"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
+/*****************
+** Project HTML **
+*****************/
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
-var HTMLschoolStart = '<div class="education-entry"></div>';
+/****************
+** School HTML ** Note that the hidden class is added here
+****************/
+var HTMLschoolStart = '<div class="education-entry hidden"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajors = '<em><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<br><h3>Online Classes</h3>';
+var HTMLonlineClasses = '<div class="hidden">' +
+                          '<br><h3>Online Classes</h3>' +
+                        '</div>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
@@ -79,21 +87,38 @@ var googleMap = '<div id="map"></div>';
 /****************
 ** My JS funcs **
 *****************/
+// This is the footer handler
 $(document).ready(function() {
   $('#connect').click(function() {
-    $('#footerContacts').toggleClass('hidden');
+    $('#footerContacts').slideToggle('slow');
   });
 });
+
+// This is the section handler
+$(document).ready(function() {
+  $('.section-header').click(function() {
+    $(this).siblings('div').slideToggle('slow');
+    var image = $('img', this);
+    if (image.attr('src') === 'images/add.svg') {
+      image.attr({'src': 'images/minus.svg',
+                  'alt': 'minus sign'});
+    } else {
+      image.attr({'src': 'images/add.svg',
+                  'alt': 'plus sign'});
+    }
+  });
+});
+
 
 /***********************
 ** International Name **
 ************************/
-$(document).ready(function() {
-  $('button').click(function() {
-    var iName = inName() || function(){};
-    $('#name').html(iName);
-  });
-});
+// $(document).ready(function() {
+//   $('button').click(function() {
+//     var iName = inName() || function(){};
+//     $('#name').html(iName);
+//   });
+// });
 
 /********************
 ** Click Locations **
