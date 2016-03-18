@@ -1,4 +1,4 @@
-### About
+## About
 
 This is a resume project that I completed for Udacity. This was the second project in the Front
 End Nanondegree and was all about using Javascript/Jquery to Replace HTML placeholders with
