@@ -1,15 +1,12 @@
 ///////////////////////////
 // Where the JSON's live //
 ///////////////////////////
-
-// TODO: fill the objects with real information
-// TODO: Make it pretty and add cool functionality
 var bio = {
 	"name" : "Mark Weigel",
 	"role" : "Web Developer",
 	"contacts" : {
 		"mobile" : "267-603-2621",
-		"email" : "mark@weigel.site",
+		"email" : "markweig@gmail.com",
 		"github" : "https://github.com/mrkjesus2",
 		"twitter" : "https://twitter.com/markweig",
 		"location" : "Philadelphia, PA",
@@ -17,7 +14,14 @@ var bio = {
 	},
 	"welcomeMessage" : "This is a test message",
 	"skills" : [
-		"linux", "logical thought", "javascript soon"
+		"HTML 5",
+		"CSS",
+		"Javascript",
+		"Git",
+		"Gulp",
+		"JQuery",
+		"Windows",
+		"Linux"
 	],
 	"picURL" : "images/Profile.jpg"
 };
@@ -27,20 +31,21 @@ var projects = {
 		{
 			"title": "Portfolio",
 			"dates": "2015",
-			"description": "The first project at Udacity focusing on Responsive Design",
+			"description": "This was the first project that I completed as part of my Front-End Nanodegree at Udacity.com." +
+				" I was given a comp and expected to make a responsive site that matched the given design." +
+				" I wrote a simple CSS grid as well as all of the necessary HTML. The \"picture\" and" +
+				" \"source\" elements were utilized to provide responsive images saving critical bandwidth for mobile users." +
+				" SVG icons were also used to take advantage of their ability to scale without pixelation.",
 			"images": ["images/portfolio-1.png", "images/portfolio-2.png"]
 		},{
 			"title": "Resume",
 			"dates": "2015",
-			"description": "The second project at Udacity focusing on Introductory Javacript/Jquery",
+			"description": "This was the second project that I completed for the Udacity Front-End Nanodegree" +
+				" It served as an introduction to JSON, Jquery, and Javascript. The concept was to use JSON objects" +
+				" to provide the information that will be displayed on the web page, laying the groundwork for working" +
+				" with data received from API's.",
 			"images": ["images/resume-1.png", "images/resume-2.png"]
 		}
-		// ,{
-		// 	"title": "Project #",
-		// 	"dates": "Fill-YEAR",
-		// 	"description": "A cute little description",
-		// 	"images": ["url1", "url2"]
-		// }
 	]
 
 };
@@ -49,54 +54,93 @@ var work = {
 	"jobs": [
 		{
 			"employer": "Rattle Clack Entertainment",
-			"title": "Audio/Visual Technician",
+			"title": "Freelance A/V Tech",
 			"location": "Pitsburgh, PA",
-			"dates": "June 2014 - Preset",
-			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
+			"dates": "June 2014 - Present",
+			"description": "Freelance work for a small A/V company that provides services for conferences." +
+				" I loaded and unloaded gear that was required for the conference, ran cables(power, audio, and visual)," +
+				" controlled video switchers and soundboards, and set up stages(pipe and drape, projector screens, etc.)"
 		},{
 			"employer": "Amis Trattoria",
 			"title": "Server",
 			"location": "Philadelphia, PA",
 			"dates": "July 2012 - Present",
-			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
+			"description": "A rustic Italian restaurant that renowned chef Marc Vetri opened as his 3rd restaurant." +
+				" I ensure guest satisfaction 100% of the time in a fast-paced chef-driven environment" +
+				" by maintaining a thorough knowledge of the menu and the preparation of all items to accommodate" +
+				" allergies/preferences of the guests, achieving a cordial rapport with guests, and upholding" +
+				" impeccable service standards."
 		},{
 			"employer": "South Philadelphia Tap Room",
 			"title": "Manager/Bartender",
 			"location": "Philadelphia, PA",
-			"dates": "1900-1901",
-			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
+			"dates": "August 2011 - July 2012",
+			"description": "Neighborhood Gastropub specializing in craft beer. I worked with a team of managers" +
+				" to help plan events and keep the bar running efficiently. Keeping the staff's knowledege of" +
+				" craft beers up to date was a key responsibility. I also incorporated dropbox into our workflow" +
+				" so that beer schedules were more easily maintained."
 		},{
 			"employer": "Caribou Cafe",
 			"title": "General Manager",
 			"location": "Philadelphia, PA",
-			"dates": "1900-1901",
-			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
+			"dates": "October 2008 - August 2011",
+			"description": "French Bistro in the heart of Center City focusing on \"peasant food\". My task was" +
+				" to run the restaurant\"as if I was the owner.\" I was responsible for scheduling, maintenance," +
+				" beverage ordering, and managing the floor during service. I received accolades for lowering liqour" +
+				" cost while maintaining stock based on usage and keeping costs under control."
+		},{
+			"employer": "Smashed Cat Studios",
+			"title": "Audio Engineer/Acoustic Designer",
+			"location": "Philadelphia, PA",
+			"dates": "2009 - 2011",
+			"description": "Due to my experience with recording equipment, I was allowed to move my gear" +
+				" into the studio and help with productions. In short time, I realized that the room did" +
+				" not sound good enough for quality recordings, so I did an acoustic analysis and acquired" +
+				" audio treatment(bass traps and some high frequency solutions) to improve the sound of our" +
+				" recordings. When the owner was unavailable, I ran hip-hop session with a great response" +
+				" from the artist."
 		},{
 			"employer": "Comedy Cellar",
 			"title": "Server",
 			"location": "New York, NY",
-			"dates": "1900-1901",
-			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
+			"dates": "June 2007 - October 2008",
+			"description": "A staple in the East Village of New York, there were a number of A-list" +
+				" comedians that performed at this club. It was challenging work environment due to" +
+				" all patrons being served as soon as the show started, meaning there were 30 guests" +
+				" that I had to attend to instantly."
+		},{
+			"employer": "Vestals",
+			"title": "Bass Player",
+			"location": "Minneapolis and anywhere necessary",
+			"dates": "2004 - 2007",
+			"description": "Pop/Rock band that debuted on the college music charts in the Top 100." +
+				" I learned the debut record over the course of a week and when auditioned was offered the gig" +
+				" on the spot. Two weeks later I was performing for the record release. We toured the East and" +
+				" West Coast in addition to countless weekend trips throughout the Midwest in support of the album." +
+				" When it was time to record the second album, I was involved from ??????"
 		},{
 			"employer": "Timberlodge Steakhouse",
 			"title": "Head Bartender",
 			"location": "Roseville, MN",
-			"dates": "1900-1901",
-			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
+			"dates": "March 2001 - May 2007",
+			"description": "Regional Steakhouse chain where I learned the ropes of working in a restaurant" +
+				" I promptly earned the daytime bartender position and continued learning more about the" +
+				" business. It didn't take long before I was called upon, out of necessity, to cover a dinner" +
+				" shift on the bar. After exceeding everybodies expectations, including mine, there were regular" +
+				" dinner shifts available to me. After the first location where I worked was bought by another" +
+				" restaurant chain, I moved the Roseville location to be the head bartender where I worked with" +
+				" the General Manager to lower liqour cost from 30% to 22%."
+		},{
+			"employer": "September's Child",
+			"title": "Bass Player",
+			"location": "Minneapolis",
+			"dates": "1998 - 2002",
+			"description": "Rock band inspired by the Replacements that was voted the Best New Band by the" +
+				" City Pages in 1998. After my first rock band dissolve, I auditioned for this group which" +
+				" despite my youth, welcomed me to join the band thanks to my proficiency. We quickly became" +
+				" a routinely hired group and were even pursued by a representative from Geffen records."
 		}
 	]
-	// These should probably be part of work history
-	// 	{
-	// 		"name": "Vestals",
-	// 		"description": "Band stuff"
-	// 	},{
-	// 		"name": "September's Child",
-	// 		"description": "Band stuff"
-	// 	},{
-	// 		"name": "Smashed Cat Studios",
-	// 		"description": "Studio stuff"
-	// 	}
-	// ]
 };
 
 var education = {
@@ -104,23 +148,23 @@ var education = {
 		{
 			"name" : "Normandale Community College",
 			"location" : "Bloomington, MN",
-			"degree" : "Nope",
-			"majors" : ["Engineering Prereqs"],
-			"dates" : 200,
+			"degree" : "No degree received",
+			"majors" : ["Engineering Prerequisites"],
+			"dates" : "2001 - 2003",
 			"url" : "Put your course info here"
 		},{
 			"name" : "University of Minnesota",
 			"location" : "Minneapolis,MN",
-			"majors" : ["Liberal Arts", "Music"],
-			"degree" : "nope",
-			"dates": 200,
+			"majors" : ["Liberal Arts"],
+			"degree" : "No degree recieved",
+			"dates": "1997 - 1999",
 			"url" : "Put your course info here"
 		},{
 			"name" : "Cooper High School",
 			"location" : "Plymouth, MN",
 			"majors" : ["College Prep"],
-			"degree" : "College Prep",
-			"dates": 200,
+			"degree" : "Diploma",
+			"dates": 1998,
 			"url" : "Put your course info here"
 		}
 	],
@@ -128,12 +172,7 @@ var education = {
 		{
 			"title" : "Front-End Nanodegree",
 			"school" : "Udacity",
-			"dates" : 2015,
-			"url" : "http://www.udacity.com/"
-		},{
-			"title" : "Front-End Nanodegree",
-			"school" : "Udacity",
-			"dates" : 2015,
+			"dates" : 2015 - 2016,
 			"url" : "http://www.udacity.com/"
 		}
 	]
