@@ -172,7 +172,7 @@ var education = {
 		{
 			"title" : "Front-End Nanodegree",
 			"school" : "Udacity",
-			"dates" : 2015 - 2016,
+			"dates" : "2015 - 2016",
 			"url" : "http://www.udacity.com/"
 		}
 	]
