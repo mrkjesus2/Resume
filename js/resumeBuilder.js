@@ -55,7 +55,7 @@ var work = {
 		{
 			"employer": "Rattle Clack Entertainment",
 			"title": "Freelance A/V Tech",
-			"location": "Pitsburgh, PA",
+			"location": "Pittsburgh, PA",
 			"dates": "June 2014 - Present",
 			"description": "Freelance work for a small A/V company that provides services for conferences." +
 				" I loaded and unloaded gear that was required for the conference, ran cables(power, audio, and visual)," +
@@ -76,7 +76,7 @@ var work = {
 			"location": "Philadelphia, PA",
 			"dates": "August 2011 - July 2012",
 			"description": "Neighborhood Gastropub specializing in craft beer. I worked with a team of managers" +
-				" to help plan events and keep the bar running efficiently. Keeping the staff's knowledege of" +
+				" to help plan events and keep the bar running efficiently. Keeping the staff's knowledge of" +
 				" craft beers up to date was a key responsibility. I also incorporated dropbox into our workflow" +
 				" so that beer schedules were more easily maintained."
 		},{
@@ -86,7 +86,7 @@ var work = {
 			"dates": "October 2008 - August 2011",
 			"description": "French Bistro in the heart of Center City focusing on \"peasant food\". My task was" +
 				" to run the restaurant\"as if I was the owner.\" I was responsible for scheduling, maintenance," +
-				" beverage ordering, and managing the floor during service. I received accolades for lowering liqour" +
+				" beverage ordering, and managing the floor during service. I received accolades for lowering liquor" +
 				" cost while maintaining stock based on usage and keeping costs under control."
 		},{
 			"employer": "Smashed Cat Studios",
@@ -126,10 +126,10 @@ var work = {
 			"description": "Regional Steakhouse chain where I learned the ropes of working in a restaurant" +
 				" I promptly earned the daytime bartender position and continued learning more about the" +
 				" business. It didn't take long before I was called upon, out of necessity, to cover a dinner" +
-				" shift on the bar. After exceeding everybodies expectations, including mine, there were regular" +
+				" shift on the bar. After exceeding everybody's expectations, including mine, there were regular" +
 				" dinner shifts available to me. After the first location where I worked was bought by another" +
 				" restaurant chain, I moved the Roseville location to be the head bartender where I worked with" +
-				" the General Manager to lower liqour cost from 30% to 22%."
+				" the General Manager to lower liquor cost from 30% to 22%."
 		},{
 			"employer": "September's Child",
 			"title": "Bass Player",
@@ -156,7 +156,7 @@ var education = {
 			"name" : "University of Minnesota",
 			"location" : "Minneapolis,MN",
 			"majors" : ["Liberal Arts"],
-			"degree" : "No degree recieved",
+			"degree" : "No degree received",
 			"dates": "1997 - 1999",
 			"url" : "Put your course info here"
 		},{
